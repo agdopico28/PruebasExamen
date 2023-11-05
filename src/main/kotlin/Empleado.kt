@@ -92,3 +92,22 @@ fun DeleteEmpleado(){
     st.close()
     con.close()
 }
+
+fun SelectEmpleado(){
+    val url = "jdbc:sqlite:C:\\Users\\amali\\IdeaProjects\\PruebasExamen\\ruta_del_fitxer_sqlite"
+
+    val	con = DriverManager.getConnection(url)
+    val st = con.createStatement()
+    val rs = st.executeQuery("select * from  EMPLEADO ")
+    var count = 0
+    while (rs.next()) {
+        print("Empleado: ${rs.getInt(1)}\t")
+        print(rs.getString(2)+ "\t")
+        print(rs.getString(3)+ "\t")
+        print("${rs.getInt(4)}\t\n")
+        count++
+    }
+    print("\n\t Hay $count inserciones")
+    st.close()
+    con.close()
+}

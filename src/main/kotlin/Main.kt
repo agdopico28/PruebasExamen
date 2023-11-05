@@ -20,8 +20,8 @@ fun showMenu() {
     println("4- Insert Empleado")
     println("5- Insert Jefe")
     println("6- Delete Empleado")
-    println("6- Delete Jefe")
-    println("7- Select")
+    println("7- Delete Jefe")
+    println("8- Select")
     introduceNumber() //se ejecuta para introducir uno nuevo
 }
 
@@ -56,37 +56,37 @@ fun loopNumbers(number: Int) {
 
         2 -> {
             UpdateEmpleado()
-            SelectJefeEmpleado()
+            SelectEmpleado()
             showMenu()
         }
 
         3 -> {
             UpdateJefe()
-            SelectJefeEmpleado()
+            SelectJefe()
             showMenu()
         }
 
         4 -> {
             InsertEmpleado()
-            SelectJefeEmpleado()
+            SelectEmpleado()
             showMenu()
         }
 
         5 -> {
             InsertJefe()
-            SelectJefeEmpleado()
+            SelectJefe()
             showMenu()
         }
 
         6 -> {
             DeleteEmpleado()
-            SelectJefeEmpleado()
+            SelectEmpleado()
             showMenu()
         }
 
         7 -> {
             DeleteJefe()
-            SelectJefeEmpleado()
+            SelectJefe()
             showMenu()
         }
         else -> {
@@ -117,3 +117,6 @@ fun SelectJefeEmpleado(){
     st.close()
     con.close()
 }
+
+
+
